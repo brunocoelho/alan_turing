@@ -14,29 +14,38 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="toptalApp">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+  <body data-ng-app="toptalApp">
 
-    <!-- Add your site or application content here -->
+    <div class="header">
+      <ul class="nav nav-pills pull-right">
+        <li><button type="button" class="btn btn-primary">Developer</button></li>
+        <li><button type="button" class="btn btn-primary">Company</button></li>
+        <li><button type="button" class="btn btn-info">Login</button></li>
+      </ul>
+      <h3 class="text-muted">[LOGO DO TOPTAL] Exclusive access to top developers</h3>
+    </div>
+
     <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">toptal</h3>
-      </div>
 
       <div ng-view=""></div>
 
       <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <div class="row">
+          <div class="col-md-6">
+            About toptal
+          </div>
+          <div class="col-md-3">
+            FAQ
+          </div>
+          <div class="col-md-1">
+            What why
+          </div>
+          <div class="col-md-2">
+            Contact
+          </div>
+        </div>
       </div>
     </div>
-
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -48,13 +57,6 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
-
-    <!-- build:js(.) scripts/oldieshim.js -->
-    <!--[if lt IE 9]>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.js"></script>
-    <![endif]-->
-    <!-- endbuild -->
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -70,10 +72,11 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/services/user.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

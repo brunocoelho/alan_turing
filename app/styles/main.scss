@@ -71,11 +71,10 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
+    max-width: 1200px;
   }
 
   /* Remove the padding we set earlier */
-  .header,
   .marketing,
   .footer {
     padding-left: 0;
@@ -88,5 +87,39 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+  }
+}
+
+.centered-label {
+  text-align: center;
+}
+
+div.row > div {
+  border: 1px solid #E4E4E4;
+  height: 238px;
+}
+
+.user-name {
+  font-family: "Helvetica Neue","Helvetica","Arial","sans-serif";
+  font-size: 34px;
+  line-height: 42px;
+}
+
+.user-main-information {
+  background-color: #E4E4E4;
+}
+
+.input-wysiwyg {
+  background-color: #E4E4E4;
+  border: 1px solid #E4E4E4;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid #BABABA;
+  }
+
+  &:focus {
+    background-color: white;
   }
 }

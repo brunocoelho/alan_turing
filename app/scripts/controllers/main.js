@@ -8,10 +8,6 @@
  * Controller of the toptalApp
  */
 angular.module('toptalApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function (User) {
+    this.user = User.getProfile();
   });

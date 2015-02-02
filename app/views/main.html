@@ -1,4 +1,120 @@
-<div class="jumbotron">
+<div data-ng-controller="MainCtrl as main">
+
+
+  <div class="row">
+    <div class="col-md-3">
+      <img data-ng-src="{{main.user.image}}" alt="User's picture"><br>
+    </div>
+    <div class="col-md-6 user-main-information">
+      <div>
+        <input class="input-wysiwyg user-name" data-ng-model="main.user.name" placeholder="Add name" type="text">
+      </div>
+      <div>
+        <input class="input-wysiwyg" data-ng-model="main.user.city" placeholder="Add location" type="text">
+      </div>
+      <div>
+        <input class="input-wysiwyg" placeholder="Add language" type="text">
+      </div>
+      <div>
+        <input class="input-wysiwyg" placeholder="Add skill" type="text">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary">Save profile</button>
+      <button type="button" class="btn btn-primary">Publish profile</button>
+      <p>
+        (You can only publish a completed profile)
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      Portfolio
+    </div>
+    <div class="col-md-3">
+      Experience
+    </div>
+    <div class="col-md-3">
+      Sample code
+    </div>
+    <div class="col-md-3">
+      <div>
+        Availability
+      </div>
+      <div>
+        Preferred environment
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      content
+    </div>
+    <div class="col-md-3">
+      content
+    </div>
+    <div class="col-md-3">
+      Mapa colocado dinamicamente via cidade
+    </div>
+    <div class="col-md-3">
+      content
+    </div>
+  </div>
+
+  <div class="centered-label">
+    Let me introduce myself...
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      content
+    </div>
+    <div class="col-md-3">
+      content
+    </div>
+    <div class="col-md-3">
+      content
+    </div>
+    <div class="col-md-3">
+      content
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-9 centered-label">
+      To hire Martin join us as a <button type="button" class="btn btn-primary">Client</button>
+    </div>
+    <div class="col-md-3">
+      or as a developer <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <div class="centered-label">
+    Top skill on toptal
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      List 1
+    </div>
+    <div class="col-md-3">
+      List 2
+    </div>
+    <div class="col-md-3">
+      List 3
+    </div>
+    <div class="col-md-3">
+      List 4
+    </div>
+  </div>
+
+  <div class="centered-label">
+    Join the toptal community. Apply to work with us as <button type="button" class="btn btn-primary">Developer</button> or <button type="button" class="btn btn-primary">Client</button>
+  </div>
+</div>
+
+
+<!-- <div class="jumbotron">
   <h1>'Allo, 'Allo!</h1>
   <p class="lead">
     <img src="images/yeoman.png" alt="I'm Yeoman"><br>
@@ -20,4 +136,4 @@
 
   <h4>Karma</h4>
   <p>Spectacular Test Runner for JavaScript.</p>
-</div>
+</div> -->

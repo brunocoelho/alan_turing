@@ -10,7 +10,7 @@
         <input class="input-wysiwyg user-name" data-ng-model="main.user.name" placeholder="Add name" type="text">
       </div>
       <div>
-        <input class="input-wysiwyg" data-ng-model="main.user.city" placeholder="Add location" type="text">
+        <input class="input-wysiwyg" ng-autocomplete data-ng-model="autocomplete" options="options" details="details" placeholder="Add location" type="text">
       </div>
       <div>
         <input class="input-wysiwyg" placeholder="Add language" type="text">

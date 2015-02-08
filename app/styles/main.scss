@@ -90,13 +90,21 @@ body {
   }
 }
 
+/* My styles */
+
+/* Remove padding from original .col bootstrap class */
+.full-width {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 .centered-label {
   text-align: center;
 }
 
 div.row > div {
   border: 1px solid #E4E4E4;
-  height: 238px;
+  height: 240px;
 }
 
 .user-name {
@@ -122,4 +130,9 @@ div.row > div {
   &:focus {
     background-color: white;
   }
+}
+
+.angular-google-map-container {
+  height: 238px;
+  width: 100%;
 }

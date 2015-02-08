@@ -10,7 +10,7 @@
         <input class="input-wysiwyg user-name" data-ng-model="main.user.name" placeholder="Add name" type="text">
       </div>
       <div>
-        <input class="input-wysiwyg" ng-autocomplete data-ng-model="autocomplete" options="options" details="details" placeholder="Add location" type="text">
+        <input class="input-wysiwyg bold-label" ng-autocomplete data-ng-model="autocomplete" options="options" details="details" placeholder="Add location" type="text">
       </div>
       <div>
         <input class="input-wysiwyg" placeholder="Add language" type="text">
@@ -53,8 +53,8 @@
     <div class="col-md-3">
       content
     </div>
-    <div class="col-md-3">
-      Mapa colocado dinamicamente via cidade
+    <div class="col-md-3 full-width">
+      <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
     </div>
     <div class="col-md-3">
       content

@@ -136,3 +136,22 @@ div.row > div {
   height: 238px;
   width: 100%;
 }
+/* FileInput */
+.user-picture-input {
+  background-color: white;
+  display: none !important;
+  margin: auto;
+  width: 90%;
+}
+
+.user-picture-container {
+  &:hover {
+    background-color: black;
+    .user-picture {
+      display: none;
+    }
+    .user-picture-input {
+       display: block !important;
+     }
+   }
+}

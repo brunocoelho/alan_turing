@@ -11,7 +11,38 @@ angular.module('toptalApp')
   .controller('MainCtrl', function ($scope, User) {
     var lat,
         lng;
+
+    this.skillLevels = [
+      { level: 'Basic', class: 'basic-level' },
+      { level: 'Intermediate', class: 'intermediate-level' },
+      { level: 'Advanced', class: 'advanced-level' }
+    ];
+
+    this.skillLevel = this.skillLevels[2];
+
+    this.showSelect = false;
+
     this.user = User.getProfile();
+
+    this.addSkill = function() {
+      this.user.skills.push({ level: this.skillLevel.class, name: this.skillName });
+
+      this.skillName = '';
+      this.skillLevel = this.skillLevels[2];
+      this.showSelect = false;
+    };
+
+    this.deleteSkill = function(index) {
+      this.user.skills.splice(index, 1);
+    };
+
+    this.showSelectLevels = function() {
+      this.showSelect = true;
+    };
+
+    this.shouldShowAddSkillButton = function() {
+      return this.skillName === undefined || this.skillName === '';
+    };
 
     $scope.$watch('details', function(details) {
       if (details) {

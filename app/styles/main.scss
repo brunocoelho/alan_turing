@@ -136,6 +136,66 @@ div.row > div {
   height: 238px;
   width: 100%;
 }
+
+.bold-label {
+  font-weight: bold;
+}
+
+/* Skills */
+.list-skills > span {
+  color: white;
+  margin: 0 7px 7px 0;
+}
+
+.basic-level {
+  background-color: #9ACBFD;
+}
+
+.intermediate-level {
+  background-color: #3F96ED;
+}
+
+.advanced-level {
+  background-color: #175ba0;
+}
+
+.skill-container {
+  width: 50%;
+}
+
+.select-skill-level {
+  margin-left: 5px;
+}
+
+.skill-name {
+  float: left;
+  width: 55%;
+}
+
+.skill-level {
+  // display: none;
+  float: right;
+}
+
+.remove-skill {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 6px;
+}
+
+.single-skill {
+  display: inline-block;
+  font-size: 14px;
+  height: 30px;
+  line-height: 20px;
+  position: relative;
+}
+
+.single-skill:hover > .remove-skill {
+  display: inline;
+}
+
 /* FileInput */
 .user-picture-input {
   background-color: white;

@@ -12,7 +12,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
   padding-bottom: 20px;
 }
 
@@ -92,6 +91,61 @@ body {
 
 /* My styles */
 
+* {
+  font-family: proxima-nova, Arial, sans-serif;
+}
+
+.header {
+  background-color: black;
+  font-style: italic;
+  padding-top: 15px;
+
+  .btn-primary {
+    background-color: white;
+    border-color: inherit;
+    color: black;
+    font-style: normal;
+    font-weight: bold;
+  }
+  .btn-info {
+    background-color: gray;
+    border-color: inherit;
+    font-style: normal;
+    font-weight: bold;
+    margin-left: 20px;
+  }
+  .call-us {
+    float: right;
+  }
+  .logo-label {
+    margin-left: 15px;
+  }
+  .logo-links, .call-us {
+    display: inline;
+    font-style: normal;
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
+      color: white;
+      display: inline;
+      margin-right: 10px;
+    }
+  }
+  .header-util-information {
+    margin-bottom: 15px;
+  }
+}
+
+
+.join-us-label {
+  color: white;
+  font-style: normal;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 15px;
+}
+
 /* Remove padding from original .col bootstrap class */
 .full-width {
   padding-left: 0 !important;
@@ -129,6 +183,11 @@ div.row > div {
 
   &:focus {
     background-color: white;
+  }
+
+  &.white {
+    background-color: white;
+    border-color: white;
   }
 }
 
@@ -214,4 +273,97 @@ div.row > div {
        display: block !important;
      }
    }
+}
+
+.background-black-when-editing {
+  &:hover {
+    background-color: black;
+
+    p {
+      color: white;
+    }
+  }
+}
+
+.row p.text-center {
+  font-size: 1.3em;
+}
+
+blockquote {
+  border-left: 0;
+  height: 70%;
+  margin-top: 5px;
+
+  &:before {
+    color: #999;
+    content: "“";
+    display: block;
+    font: italic 400%/1 sans-serif, serif, 'Times New Roman', Times;
+    height: 0;
+    left: 35px;
+    margin-left: -37px;
+    position: absolute;
+    top: 50px;
+  }
+
+  &:after {
+    bottom: 40px;
+    color: #999;
+    content: "”";
+    display: block;
+    font: italic 400%/1 sans-serif, serif, 'Times New Roman', Times;
+    height: 0;
+    position: absolute;
+    right: 15px;
+  }
+
+  footer {
+    float: right;
+  }
+
+  textarea {
+    height: 100%;
+    resize: none;
+  }
+}
+
+p.text-center {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+footer.no-hyphen {
+  &:before {
+    content: '\00a0';
+  }
+}
+
+.introduce-myself-label {
+  font-size: 3em;
+  font-weight: normal;
+  margin: 22px 0 22px 0;
+}
+
+.top-skills {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 22px 0 22px 0;
+}
+
+.availability {
+  border-bottom: 1px solid #E4E4E4;
+  height: 50%;
+
+  .ng-binding {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.preferred-environment {
+  .ng-binding {
+    padding: 0 20px 0 20px;
+    text-align: center;
+  }
 }

@@ -17,17 +17,41 @@
   <body data-ng-app="toptalApp">
 
     <div class="header">
-      <ul class="nav nav-pills pull-right">
-        <li><button type="button" class="btn btn-primary">Developer</button></li>
-        <li><button type="button" class="btn btn-primary">Company</button></li>
-        <li><button type="button" class="btn btn-info">Login</button></li>
-      </ul>
-      <h3 class="text-muted">[LOGO DO TOPTAL] Exclusive access to top developers</h3>
+      <div>
+        <ul class="nav nav-pills pull-right">
+          <li><span class="join-us-label">Join toptal as</span></li>
+          <li><button type="button" class="btn btn-primary">Developer</button></li>
+          <li><button type="button" class="btn btn-primary">Company</button></li>
+          <li><button type="button" class="btn btn-info">Login</button></li>
+        </ul>
+        <h3 class="text-muted">
+          <a href="http://www.toptal.com">
+            <img src="images/toptal-logo-white.png" alt="toptal logo"/>
+          </a>
+          <span class="logo-label">Exclusive access to top developers</span>
+        </h3>
+      </div>
+      <div class="header-util-information">
+        <ul class="logo-links">
+          <li>what</li>
+          <li>why</li>
+          <li>how</li>
+          <li>clients</li>
+          <li>team</li>
+          <li>labs</li>
+          <li>faq</li>
+          <li>contact</li>
+        </ul>
+
+        <ul class="call-us">
+          <li>Call us: 888.323.4422</li>
+        </ul>
+      </div>
     </div>
 
     <div class="container">
 
-      <div ng-view=""></div>
+      <div data-ng-view=""></div>
 
       <div class="footer">
         <div class="row">

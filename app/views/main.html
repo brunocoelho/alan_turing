@@ -39,41 +39,61 @@
       </p>
     </div>
   </div>
+
   <div class="row">
     <div class="col-md-3">
-      Portfolio
+      <p class="text-center">Portfolio</p>
     </div>
     <div class="col-md-3">
-      Experience
+      <p class="text-center">Experience</p>
     </div>
     <div class="col-md-3">
-      Sample code
+      <p class="text-center">Sample code and algorithms</p>
     </div>
-    <div class="col-md-3">
-      <div>
-        Availability
+    <div class="col-md-3 full-width">
+      <div class="availability">
+        <p class="text-center">Availability</p>
+        <p>
+          {{main.user.availability}}
+        </p>
       </div>
-      <div>
-        Preferred environment
+      <div class="preferred-environment">
+        <p class="text-center">Preferred environment</p>
+        <p>
+          {{main.user.preferredEnvironment}}
+        </p>
       </div>
     </div>
   </div>
+
   <div class="row">
-    <div class="col-md-3">
-      content
+    <div class="col-md-3 background-black-when-editing">
+      <p class="text-center">The most amazing...</p>
+      <blockquote>
+        <textarea class="input-wysiwyg white" data-ng-model="main.user.amazingProject"></textarea>
+        <footer>{{main.user.firstName()}}</footer>
+      </blockquote>
     </div>
-    <div class="col-md-3">
-      content
+    <div class="col-md-3 background-black-when-editing">
+      <p class="text-center">In clients I look for...</p>
+      <blockquote>
+        <textarea class="input-wysiwyg white" data-ng-model="main.user.clients"></textarea>
+        <footer>{{main.user.firstName()}}</footer>
+      </blockquote>
     </div>
     <div class="col-md-3 full-width">
       <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
     </div>
-    <div class="col-md-3">
-      content
+    <div class="col-md-3 background-black-when-editing">
+      <p class="text-center">Note</p>
+      <blockquote>
+        <textarea class="input-wysiwyg white" data-ng-model="main.user.note.message"></textarea>
+        <footer>{{main.user.note.from}}</footer>
+      </blockquote>
     </div>
   </div>
 
-  <div class="centered-label">
+  <div class="centered-label introduce-myself-label">
     Let me introduce myself...
   </div>
 
@@ -85,7 +105,7 @@
       content
     </div>
     <div class="col-md-3">
-      content
+      <p class="text-center">The most amazing...</p>
     </div>
     <div class="col-md-3">
       content
@@ -101,8 +121,8 @@
     </div>
   </div>
 
-  <div class="centered-label">
-    Top skill on toptal
+  <div class="centered-label top-skills">
+    Top skills on toptal
   </div>
 
   <div class="row">
@@ -124,28 +144,3 @@
     Join the toptal community. Apply to work with us as <button type="button" class="btn btn-primary">Developer</button> or <button type="button" class="btn btn-primary">Client</button>
   </div>
 </div>
-
-
-<!-- <div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
-
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div> -->

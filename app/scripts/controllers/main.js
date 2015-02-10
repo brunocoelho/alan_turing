@@ -29,19 +29,14 @@ angular.module('toptalApp')
 
       this.skillName = '';
       this.skillLevel = this.skillLevels[2];
-      this.showSelect = false;
     };
 
     this.deleteSkill = function(index) {
       this.user.skills.splice(index, 1);
     };
 
-    this.showSelectLevels = function() {
-      this.showSelect = true;
-    };
-
     this.shouldShowAddSkillButton = function() {
-      return this.skillName === undefined || this.skillName === '';
+      return this.skillName !== undefined && this.skillName !== '';
     };
 
     $scope.$watch('details', function(details) {

@@ -23,11 +23,11 @@
         </span>
       </div>
       <div class="skill-container">
-        <input class="input-wysiwyg bold-label skill-name" data-ng-click="main.showSelectLevels()" data-ng-model="main.skillName" placeholder="Add skill" type="text">
+        <input class="input-wysiwyg bold-label skill-name" data-ng-model="main.skillName" placeholder="Add skill" type="text">
 
-        <div class="skill-level" data-ng-show="main.showSelect">
+        <div class="skill-level" data-ng-show="main.shouldShowAddSkillButton()">
           <select class="select-skill-level" data-ng-model="main.skillLevel" data-ng-options="skillLevel.level for skillLevel in main.skillLevels"></select>
-          <span class="glyphicon glyphicon-plus add-skill-button" data-ng-click="main.addSkill()" data-ng-class="{ invisible: main.shouldShowAddSkillButton() }" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-plus add-skill-button" data-ng-click="main.addSkill()" aria-hidden="true"></span>
         </div>
       </div>
     </div>

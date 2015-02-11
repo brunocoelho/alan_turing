@@ -17,7 +17,7 @@
         <input class="input-wysiwyg bold-label" data-ng-model="main.user.language" placeholder="Add language" type="text">
       </div>
       <div class="list-skills">
-        <span class="label label-primary single-skill" data-ng-class="skill.level" data-ng-repeat="skill in main.user.skills">
+        <span class="label label-primary single-skill" data-ng-class="skill.level" data-ng-repeat="skill in main.user.skills | skillsFilter">
           {{skill.name}}
           <span class="glyphicon glyphicon-remove remove-skill" data-ng-click="main.deleteSkill($index)" aria-hidden="true"></span>
         </span>

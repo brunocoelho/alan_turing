@@ -89,6 +89,12 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+
 /* My styles */
 
 * {
@@ -167,8 +173,26 @@ div.row > div {
   line-height: 42px;
 }
 
-.user-main-information {
+.user-main-information, .save-profile-section {
   background-color: #E4E4E4;
+}
+
+.save-profile-section {
+  p {
+    color: gray;
+    font-size: 0.8em;
+  }
+  span {
+    font-weight: normal;
+  }
+}
+
+.label-action {
+  border-radius: 0.8em;
+}
+
+.label-save-profile {
+  background-color: black;
 }
 
 .input-wysiwyg {
@@ -207,19 +231,16 @@ div.row > div {
 }
 
 .basic-level {
-  background-color: #9ACBFD;
+  background-color: #A3A7Ab;
 }
 
 .intermediate-level {
-  background-color: #3F96ED;
+  background-color: #67676B;
 }
 
 .advanced-level {
-  background-color: #175ba0;
-}
-
-.skill-container {
-  width: 50%;
+  background-color: black;
+  color: white;
 }
 
 .select-skill-level {
@@ -228,12 +249,7 @@ div.row > div {
 
 .skill-name {
   float: left;
-  width: 55%;
-}
-
-.skill-level {
-  // display: none;
-  float: right;
+  width: 30%;
 }
 
 .remove-skill {

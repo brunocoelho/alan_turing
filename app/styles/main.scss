@@ -335,6 +335,7 @@ blockquote {
 
   footer {
     float: right;
+    font-size: 0.6em;
   }
 
   textarea {
@@ -360,10 +361,24 @@ footer.no-hyphen {
   margin: 22px 0 22px 0;
 }
 
-.top-skills {
+.top-skills-label {
   font-size: 2em;
   font-weight: bold;
   margin: 22px 0 22px 0;
+}
+.top-skills-row {
+  .col-md-3 {
+    border: 0;
+    height: 315px;
+  }
+
+  dd {
+    &:hover {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
+  }
 }
 
 .availability {
@@ -382,4 +397,12 @@ footer.no-hyphen {
     padding: 0 20px 0 20px;
     text-align: center;
   }
+}
+
+.dl-horizontal dt {
+  width: 10.125px;
+}
+
+.dl-horizontal dd {
+  margin-left: 20px;
 }

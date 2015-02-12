@@ -12,6 +12,9 @@ angular.module('toptalApp')
     var lat,
         lng;
 
+    this.editPortfolio = false;
+    this.editExperience = false;
+
     this.skillLevels = [
       { level: 'Basic', class: 'basic-level' },
       { level: 'Intermediate', class: 'intermediate-level' },
@@ -35,11 +38,21 @@ angular.module('toptalApp')
       this.user.skills.splice(index, 1);
     };
 
-    this.portfolioMouseenter = function() {
+    this.enableEditExperience = function() {
+      this.editExperience = true;
+    };
+
+    this.disableEditExperience = function(event) {
+      event.stopPropagation();
+      this.editExperience = false;
+    };
+
+    this.enableEditPortfolio = function() {
       this.editPortfolio = true;
     };
 
-    this.portfolioMouseleave = function() {
+    this.disableEditPortfolio = function(event) {
+      event.stopPropagation();
       this.editPortfolio = false;
     };
 

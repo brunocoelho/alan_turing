@@ -255,8 +255,17 @@ div.row > div {
 .portfolio-experience {
   form {
     input {
+      height: 20px;
       width: 100px !important;
     }
+  }
+
+  .glyphicon-ok-sign {
+    color: gray;
+  }
+
+  .view-portfolio, .view-experience {
+    cursor: pointer;
   }
 }
 

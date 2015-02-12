@@ -27,7 +27,7 @@
 
         <div class="skill-level" data-ng-show="main.shouldShowAddSkillButton()">
           <select class="select-skill-level" data-ng-model="main.skillLevel" data-ng-options="skillLevel.level for skillLevel in main.skillLevels"></select>
-          <span class="glyphicon glyphicon-plus add-skill-button" data-ng-click="main.addSkill()" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-ok-sign add-skill-button" data-ng-click="main.addSkill()" aria-hidden="true"></span>
         </div>
       </div>
     </div>
@@ -57,28 +57,53 @@
   </div>
 
   <div class="row portfolio-experience">
-    <div class="col-md-3" data-ng-mouseenter="main.portfolioMouseenter()" data-ng-mouseleave="main.portfolioMouseleave()">
+
+    <div class="col-md-3" data-ng-class="{ 'background-black-when-editing': main.editPortfolio }" data-ng-click="main.enableEditPortfolio()">
       <p class="text-center">Portfolio</p>
-      <div data-ng-hide="main.editPortfolio">
-        <ul>
-          <li data-ng-repeat="entry in main.user.portfolio" data-ng-show="entry.projectName && entry.skills">
-            <b>{{entry.projectName}}</b>, {{entry.skills}}
-          </li>
-        </ul>
-      </div>
-      <div data-ng-show="main.editPortfolio">
-        <div data-ng-repeat="entry in main.user.portfolio">
-          <form class="form-inline">
-            <div class="form-group">
-              <input type="text" data-ng-model="entry.projectName" name="project" placeholder="Project name">
-              <input type="text" data-ng-model="entry.skills" name="skill" placeholder="Skills used">
-            </div>
-          </form>
+      <div data-ng-switch on="main.editPortfolio">
+        <div class="view-portfolio" data-ng-switch-when="false">
+          <ul>
+            <li data-ng-repeat="entry in main.user.portfolio" data-ng-show="entry.projectName && entry.skills">
+              <b>{{entry.projectName}}</b>, {{entry.skills}}
+            </li>
+          </ul>
+        </div>
+        <div data-ng-switch-when="true">
+          <div data-ng-repeat="entry in main.user.portfolio">
+            <form class="form-inline">
+              <div class="form-group">
+                <input type="text" data-ng-model="entry.projectName" name="project" placeholder="Project name">
+                <input type="text" data-ng-model="entry.skills" name="skill" placeholder="Skills used">
+              </div>
+            </form>
+          </div>
+          <span class="glyphicon glyphicon-ok-sign" data-ng-click="main.disableEditPortfolio($event)"></span>
         </div>
       </div>
     </div>
-    <div class="col-md-3">
+
+    <div class="col-md-3" data-ng-class="{ 'background-black-when-editing': main.editExperience }" data-ng-click="main.enableEditExperience()">
       <p class="text-center">Experience</p>
+      <div data-ng-switch on="main.editExperience">
+        <div class="view-experience" data-ng-switch-when="false">
+          <ul>
+            <li data-ng-repeat="entry in main.user.experience" data-ng-show="entry.tech && entry.years">
+              <b>{{entry.tech}}</b>, {{entry.years}}
+            </li>
+          </ul>
+        </div>
+        <div data-ng-switch-when="true">
+          <div data-ng-repeat="entry in main.user.experience">
+            <form class="form-inline">
+              <div class="form-group">
+                <input type="text" data-ng-model="entry.tech" name="tech" placeholder="Technology">
+                <input type="text" data-ng-model="entry.years" name="years" placeholder="Years">
+              </div>
+            </form>
+          </div>
+          <span class="glyphicon glyphicon-ok-sign" data-ng-click="main.disableEditExperience($event)"></span>
+        </div>
+      </div>
     </div>
     <div class="col-md-3">
       <p class="text-center">Sample code and algorithms</p>

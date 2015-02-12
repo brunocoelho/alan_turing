@@ -7,6 +7,12 @@ angular.module('toptalApp')
       availability: 'Full-time',
       city: 'Los Angeles',
       clients: 'In clients I look for...',
+      experience: [
+        { tech: 'Ruby', years: 3 },
+        { tech: 'JavaScript', years: 3 },
+        { tech: 'Python', years: 1 },
+        { tech: 'Java', years: 2 }
+      ],
       firstName: function() {
         return this.name.split(' ')[0];
       },

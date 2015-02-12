@@ -17,6 +17,15 @@ angular.module('toptalApp')
         from: 'Breanden Beneschott, Toptal',
         message: 'John is the best engineer I\'ve ever worked with.'
       },
+      portfolio: [
+        { projectName: 'M2S', skills: 'C#' },
+        { projectName: 'Bemind', skills: 'Ruby' },
+        { projectName: 'Elife', skills: 'AngularJs' },
+        { projectName: 'Liferay', skills: 'JavaScript' },
+        { projectName: '', skills: '' },
+        { projectName: '', skills: '' },
+        { projectName: '', skills: '' }
+      ],
       preferredEnvironment: 'Git, Github, Mac OSX, Linux, Vim, Atom',
       skills: [
         {

@@ -57,8 +57,25 @@
   </div>
 
   <div class="row portfolio-experience">
-    <div class="col-md-3">
+    <div class="col-md-3" data-ng-mouseenter="main.portfolioMouseenter()" data-ng-mouseleave="main.portfolioMouseleave()">
       <p class="text-center">Portfolio</p>
+      <div data-ng-hide="main.editPortfolio">
+        <ul>
+          <li data-ng-repeat="entry in main.user.portfolio" data-ng-show="entry.projectName && entry.skills">
+            <b>{{entry.projectName}}</b>, {{entry.skills}}
+          </li>
+        </ul>
+      </div>
+      <div data-ng-show="main.editPortfolio">
+        <div data-ng-repeat="entry in main.user.portfolio">
+          <form class="form-inline">
+            <div class="form-group">
+              <input type="text" data-ng-model="entry.projectName" name="project" placeholder="Project name">
+              <input type="text" data-ng-model="entry.skills" name="skill" placeholder="Skills used">
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
     <div class="col-md-3">
       <p class="text-center">Experience</p>

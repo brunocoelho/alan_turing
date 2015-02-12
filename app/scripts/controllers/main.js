@@ -35,6 +35,14 @@ angular.module('toptalApp')
       this.user.skills.splice(index, 1);
     };
 
+    this.portfolioMouseenter = function() {
+      this.editPortfolio = true;
+    };
+
+    this.portfolioMouseleave = function() {
+      this.editPortfolio = false;
+    };
+
     this.shouldShowAddSkillButton = function() {
       return this.skillName !== undefined && this.skillName !== '';
     };

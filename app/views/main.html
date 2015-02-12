@@ -33,14 +33,30 @@
     </div>
     <div class="col-md-3 save-profile-section">
       <h5>
-        <span class="label label-default label-action label-save-profile">SAVE PROFILE</span>
-        <span class="label label-default label-action">PUBLISH PROFILE</span>
+        <span class="label label-default label-action label-save-profile"><span>SAVE PROFILE</span></span>
+        <span class="label label-default label-action label-publish-profile"><span>PUBLISH PROFILE</span></span>
       </h5>
       <p>(You can only publish a completed profile)</p>
+
+      <!-- VIEW SCREEN -->
+      <!-- <h5>
+        <span class="label label-default label-action hide-this-developer-label"><span>HIRE THIS DEVELOPER</span></span>
+      </h5> -->
+
+      <div class="upload-resume">
+        <label for="file-input">
+          <img src="images/upload-resume.png" alt="upload resume" />
+        </label>
+        <input id="file-input" type="file"/>
+
+        <!-- VIEW SCREEN -->
+        <!-- <img src="images/download-resume.png" alt="download resume" /> -->
+      </div>
+
     </div>
   </div>
 
-  <div class="row">
+  <div class="row portfolio-experience">
     <div class="col-md-3">
       <p class="text-center">Portfolio</p>
     </div>
@@ -113,12 +129,22 @@
   </div>
 
   <div class="row">
-    <div class="col-md-9 centered-label">
+    <div class="col-md-12 fill-qa-form centered-label">
+      <p>
+        Important! Please also fill out the Q&A form <span class="label label-default"><span>Q&A FORM</span></span>
+      </p>
+      <p class="total-answered">
+        5 of 25 questions answered.
+      </p>
+    </div>
+
+    <!-- VIEW SCREEN -->
+    <!-- <div class="col-md-9 centered-label">
       To hire Martin join us as a <button type="button" class="btn btn-primary">Client</button>
     </div>
     <div class="col-md-3">
       or as a developer <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-    </div>
+    </div> -->
   </div>
 
   <div class="centered-label top-skills-label">
@@ -194,9 +220,5 @@
         <dd>Visualforce Developers</dd>
       </dl>
     </div>
-  </div>
-
-  <div class="centered-label">
-    Join the toptal community. Apply to work with us as <button type="button" class="btn btn-primary">Developer</button> or <button type="button" class="btn btn-primary">Client</button>
   </div>
 </div>

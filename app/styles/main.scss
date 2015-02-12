@@ -12,7 +12,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 /* Space out content a bit */
 body {
-  padding-bottom: 20px;
+  padding-bottom: 0;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -38,9 +38,39 @@ body {
 
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
-  color: #777;
+  background-color: #E4E4E4;
   border-top: 1px solid #e5e5e5;
+  color: black;
+  padding-top: 19px;
+
+  .container {
+    height: 290px;
+  }
+
+  .copyright-term-use {
+    font-size: 0.7em;
+    div {
+      height: 20px !important;
+    }
+  }
+
+  .util-links, .faq, .contact {
+    margin-top: 10px;
+    li {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  }
+
+  .faq, .contact {
+    li:not(:first-child) {
+      font-weight: normal;
+    }
+  }
+
+  h4 {
+    font-weight: bold;
+  }
 }
 
 .container-narrow > hr {
@@ -143,7 +173,6 @@ body {
   }
 }
 
-
 .join-us-label {
   color: white;
   font-style: normal;
@@ -162,9 +191,14 @@ body {
   text-align: center;
 }
 
+// .col-*
 div.row > div {
   border: 1px solid #E4E4E4;
   height: 240px;
+
+  &:not(:first-child) {
+    border-left: 0;
+  }
 }
 
 .user-name {
@@ -193,6 +227,29 @@ div.row > div {
 
 .label-save-profile {
   background-color: black;
+
+  span {
+    font-size: 0.9em;
+  }
+}
+
+.label-publish-profile {
+  span {
+    font-size: 0.9em;
+  }
+}
+
+.upload-resume {
+  bottom: 0;
+  position: absolute;
+
+  input {
+    display: none;
+  }
+}
+
+.portfolio-experience > div {
+  border-bottom: 0 !important;
 }
 
 .input-wysiwyg {
@@ -361,6 +418,27 @@ footer.no-hyphen {
   margin: 22px 0 22px 0;
 }
 
+.fill-qa-form {
+  background-color: #E4E4E4;
+  height: 85px !important;
+  padding-top: 20px;
+
+  .total-answered {
+    font-size: 0.7em;
+  }
+
+  span.label {
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+    font-size: 1.7em;
+
+    span {
+      font-size: 0.65em;
+    }
+  }
+}
+
 .top-skills-label {
   font-size: 2em;
   font-weight: bold;
@@ -405,4 +483,36 @@ footer.no-hyphen {
 
 .dl-horizontal dd {
   margin-left: 20px;
+}
+
+.join-toptal {
+  background-color: black;
+  height: 120px;
+  font-size: 22px;
+
+  .join-toptal-container {
+    padding-top: 40px;
+  }
+
+  .first-sentence {
+    color: gray;
+  }
+
+  .label-default {
+    background-color: white;
+    color: black;
+    font-size: 28px;
+
+    span {
+      font-size: 22px;
+    }
+  }
+
+  .second-sentence {
+    color: white;
+  }
+
+  span.label {
+    border-radius: 20px;
+  }
 }

@@ -214,7 +214,7 @@ div.row > div {
 .save-profile-section {
   p {
     color: gray;
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
   span {
     font-weight: normal;
@@ -361,8 +361,9 @@ div.row > div {
     }
     .user-picture-input {
        display: block !important;
-     }
-   }
+       width: 100%;
+    }
+  }
 }
 
 .background-black-when-editing {

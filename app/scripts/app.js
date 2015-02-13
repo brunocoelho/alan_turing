@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ngAutocomplete',
-    'uiGmapgoogle-maps'
+    'uiGmapgoogle-maps',
+    'angularFileUpload'
   ])
   .config(function ($routeProvider) {
     $routeProvider

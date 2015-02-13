@@ -2,8 +2,9 @@
   <div class="row">
     <div class="col-md-3 full-width user-picture-container">
       <img class="user-picture" data-ng-src="{{main.user.image}}" alt="User's picture"><br>
+      <!-- <img class="user-picture" data-ng-src="{{myFiles[0].dataUrl}}" /> -->
       <div class="user-picture-input" id="name">
-        <input type="file" file-input="files">
+        <input type="file" data-ng-file-select file-input data-ng-model="myFiles">
       </div>
     </div>
     <div class="col-md-6 user-main-information">

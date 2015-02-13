@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('toptalApp')
-  .directive('fileInput', ['$parse', function($parse) {
+  .directive('fileInput', [function() {
     return {
       restrict: 'A',
-      link: function(scope, elem, attrs) {
+      link: function(scope, elem) {
         elem.bind('change', function() {
           var reader = new FileReader();
 

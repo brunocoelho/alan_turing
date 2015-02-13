@@ -10,7 +10,8 @@
 angular.module('toptalApp')
   .controller('MainCtrl', function ($scope, User) {
     var lat,
-        lng;
+        lng,
+        self = this;
 
     this.editPortfolio = false;
     this.editExperience = false;
@@ -26,6 +27,8 @@ angular.module('toptalApp')
     this.showSelect = false;
 
     this.user = User.getProfile();
+    $scope.autocomplete = this.user.location;
+    $scope.details = this.user.map.details;
 
     this.addSkill = function() {
       this.user.skills.push({ level: this.skillLevel.class, name: this.skillName });
@@ -61,7 +64,8 @@ angular.module('toptalApp')
     };
 
     $scope.$watch('details', function(details) {
-      if (details) {
+      if (details && details.geometry) {
+        self.user.map.details = details;
         lat = details.geometry.location.lat();
         lng = details.geometry.location.lng();
 

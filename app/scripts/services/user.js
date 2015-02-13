@@ -18,6 +18,21 @@ angular.module('toptalApp')
       },
       image: 'images/user_picture.png',
       language: 'English, French, German',
+      location: 'Recife - State of Pernambuco, Brazil',
+      map: {
+        details: {
+          geometry: {
+            location: {
+              lat: function() {
+                return -8.0578381;
+              },
+              lng: function() {
+                return -34.88289689999999;
+              }
+            }
+          }
+        }
+      },
       name: 'John Galt',
       note: {
         from: 'Breanden Beneschott, Toptal',

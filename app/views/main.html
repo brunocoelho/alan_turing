@@ -142,6 +142,11 @@
     </div>
     <div class="col-md-3 full-width">
       <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+      <div class="map-city-information-container" data-ng-show="main.user.location">
+        <div class="map-city-information">
+          {{main.user.firstName()}} lives in {{main.user.location}}. (see map)
+        </div>
+      </div>
     </div>
     <div class="col-md-3 background-black-when-editing">
       <p class="text-center">Note</p>

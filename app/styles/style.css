@@ -575,3 +575,17 @@ footer.no-hyphen:before {
 .join-toptal span.label {
   border-radius: 20px;
 }
+
+.map-city-information-container {
+  background-color: black;
+  bottom: 0;
+  color: white;
+  filter: alpha(opacity=70); /* For IE8 and earlier */
+  height: 70px;
+  opacity: 0.7;
+  position: absolute;
+}
+
+.map-city-information-container .map-city-information {
+  padding: 10px 20px 10px 20px;
+}

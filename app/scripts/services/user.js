@@ -1,12 +1,22 @@
 'use strict';
 
 angular.module('toptalApp')
-  .factory('User', function() {
+  .factory('User', ['$filter', function($filter) {
     var profile = {
       amazingProject: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.',
       availability: 'Full-time',
       city: 'Los Angeles',
       clients: 'In clients I look for...',
+      displaySkills: function() {
+        var skillsName = [],
+            skills = $filter('skillsFilter')(this.skills).slice(0, 3);
+
+        for (var i = 0; i < skills.length; i++) {
+          skillsName.push(skills[i].name);
+        }
+
+        return skillsName.join(', ');
+      },
       experience: [
         { tech: 'Ruby', years: 3 },
         { tech: 'JavaScript', years: 3 },
@@ -54,12 +64,12 @@ angular.module('toptalApp')
           name: 'AngularJs'
         },
         {
-          level: 'advanced-level',
-          name: 'JavaScript'
-        },
-        {
           level: 'intermediate-level',
           name: 'Ruby'
+        },
+        {
+          level: 'advanced-level',
+          name: 'JavaScript'
         },
         {
           level: 'basic-level',
@@ -73,4 +83,4 @@ angular.module('toptalApp')
         return profile;
       }
     };
-  });
+  }]);
